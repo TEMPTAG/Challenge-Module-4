@@ -7,8 +7,8 @@
 */
 aside {
   background: linear-gradient(
-    var(--light-accent), 
-    var(--circle-color), 
+    var(--light-accent),
+    var(--circle-color),
     var(--dark-accent)
   );
   clip-path: circle(20rem at center);
@@ -17,7 +17,7 @@ aside {
   align-items: center;
 }
 
-aside, 
+aside,
 section {
   flex: 1 1 50%;
 }
@@ -45,7 +45,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
-input[type=submit] {
+input[type="submit"] {
   padding: 1rem;
   cursor: pointer;
   font-weight: bold;
@@ -54,12 +54,12 @@ input[type=submit] {
   color: var(--light);
 }
 
-input[type=submit]:active {
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+input[type="submit"]:active {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
   background-color: var(--dark-accent);
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   border-style: inset;
   background-color: var(--dark-accent-action);
 }
@@ -85,7 +85,7 @@ section {
   Classes
 */
 .dark section {
-  border-left: solid .5rem var(--disabled);
+  border-left: solid 0.5rem var(--disabled);
 }
 
 /*
@@ -93,7 +93,7 @@ section {
 */
 #error {
   color: var(--error);
-  opacity: .75;
+  opacity: 0.75;
   position: absolute;
   bottom: -2rem;
 }
