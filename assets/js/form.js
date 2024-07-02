@@ -25,7 +25,7 @@ function handleFormSubmit(event) {
   blogs.push(blog);
   localStorage.setItem("blogs", JSON.stringify(blogs));
 
-  redirectPage("./blog.html");
+  redirectPage("blog.html");
 }
 
 function redirectPage(url) {
