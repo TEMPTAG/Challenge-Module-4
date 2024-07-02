@@ -10,7 +10,7 @@ function handleFormSubmit(event) {
   const content = document.querySelector("#content").value.trim();
 
   if (!username || !title || !content) {
-    const error = document.querySelector(".error");
+    const error = document.querySelector("#error");
     error.textContent = "Please complete the form.";
     return;
   }
