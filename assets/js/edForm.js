@@ -16,7 +16,7 @@ function handleFormSubmit(event) {
       content,
     };
 
-    localStorage.setItem("blog", JSON.stringify(blog));
+    storeLocalStorage(blog);
 
     redirectPage("blog.html");
   } else {

@@ -31,7 +31,7 @@ function writeMode() {
 
 // TODO: Create a function called `readLocalStorage` that reads from local storage and returns the data. If no data exists, return an empty array.
 function readLocalStorage() {
-  return JSON.parse(localStorage.getItem("blogs"));
+  return JSON.parse(localStorage.getItem("blogs") || "[]");
 }
 
 // TODO: Create a function called `storeLocalStorage` that takes a given object and saves the new data to the existing blog data in local storage.

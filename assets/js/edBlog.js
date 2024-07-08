@@ -33,10 +33,11 @@ function renderBlogList() {
       blockquote.textContent = blog.content;
       p.textContent = `Posted by: ${blog.username}`;
 
-      appendElement(mainElement, article);
-      appendElement(article, h2);
-      appendElement(article, blockquote);
-      appendElement(article, p);
+      article.appendChild(h2);
+      article.appendChild(blockquote);
+      article.appendChild(p);
+
+      mainElement.appendChild(article);
     });
   } else {
     noBlogs();
