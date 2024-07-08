@@ -11,16 +11,23 @@ function buildElement(tag, text, parent) {
 
 // TODO: Create a function that handles the case where there are no blog posts to display
 function noBlogs() {
-  const noBlogsText = document.createElement("p");
-  noBlogsText.textContent = "No blog posts yet...";
-  mainElement.appendChild(noBlogsText);
+  const blogs = JSON.parse(localStorage.getItem("blogs"));
+
+  if (!blogs || blogs.length === 0) {
+    const message = document.createElement("p");
+    message.textContent = "No blog posts yet...";
+    const bodyElement = document.querySelector("body");
+    bodyElement.appendChild(message);
+  }
 }
 
 // TODO: Create a function called `renderBlogList` that renders the list of blog posts if they exist. If not, call the no posts function.
 function renderBlogList() {
   const blogs = readLocalStorage();
 
-  if (blogs.length > 0) {
+  if (blogs.length === 0) {
+    noBlogs();
+  } else {
     blogs.forEach((blog) => {
       const article = document.createElement("article");
       const h2 = document.createElement("h2");
@@ -37,8 +44,6 @@ function renderBlogList() {
 
       mainElement.appendChild(article);
     });
-  } else {
-    noBlogs();
   }
 }
 
