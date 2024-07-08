@@ -6,6 +6,7 @@ const page = document.querySelector(".page");
 let mode = readMode() || "light";
 
 writeMode();
+saveMode();
 
 // Event listener to toggle the light/dark modes
 toggle.addEventListener("click", function () {
